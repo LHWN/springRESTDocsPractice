@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @Builder
 public class Header<T>  {
     private String resultCode;
-    private T date;
+    private T data;
 
     // OK
     public static <T> Header<T> OK() {
@@ -26,7 +26,7 @@ public class Header<T>  {
         return (Header<T>) Header
                 .builder()
                 .resultCode("OK")
-                .date(data)
+                .data(data)
                 .build();
     }
 
